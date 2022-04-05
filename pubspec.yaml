@@ -1,0 +1,13 @@
+name: guard_clauses
+description: A simple extensible package with guard clause extensions.
+version: 0.1.0
+repository: https://github.com/chrishibler/guard_clauses
+issue_tracker: https://github.com/chrishibler/guard_clauses/issues
+
+environment:
+  sdk: '>=2.16.1 <3.0.0'
+
+dev_dependencies:
+  lints: ^1.0.0
+dependencies: 
+  test: ^1.20.2
