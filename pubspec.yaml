@@ -1,6 +1,6 @@
 name: guard_clauses
-description: A simple extensible package with guard clause extensions.
-version: 0.1.0
+description: Package containing guard clauses that can help functions "fail fast" by verifying method contracts.
+version: 0.1.1
 repository: https://github.com/chrishibler/guard_clauses
 issue_tracker: https://github.com/chrishibler/guard_clauses/issues
 

@@ -91,5 +91,5 @@ The references are C#-centric but the concepts apply well.
 
 - [Getting Started with Guard Clauses](https://blog.nimblepros.com/blogs/getting-started-with-guard-clauses/)
 - [How to write clean validation clauses in .NET](https://www.youtube.com/watch?v=Tvx6DNarqDM) (Nick Chapsas, YouTube, 9 minutes)
-- [Guard Clauses (podcast: 7 minutes)](http://www.weeklydevtips.com/004)
-- [Guard Clause](http://deviq.com/guard-clause/)
+- [Guard Clauses (podcast: 7 minutes)](https://www.weeklydevtips.com/004)
+- [Guard Clause](https://deviq.com/guard-clause/)

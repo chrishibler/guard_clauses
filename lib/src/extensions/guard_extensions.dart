@@ -13,7 +13,8 @@ extension GuardExtensions on Guard {
   }) {
     RegExpMatch? match = RegExp(regexPattern).firstMatch(input);
     if (match == null) {
-      throw ArgumentError.value(input, name, message ?? 'Input was not in required format');
+      throw ArgumentError.value(
+          input, name, message ?? 'Input was not in required format');
     }
 
     return input;
@@ -28,7 +29,8 @@ extension GuardExtensions on Guard {
     String? message,
   }) {
     if (!predicate(input)) {
-      throw ArgumentError.value(input, name, message ?? 'Input did not satisfy the requirement');
+      throw ArgumentError.value(
+          input, name, message ?? 'Input did not satisfy the requirement');
     }
 
     return input;
@@ -41,7 +43,8 @@ extension GuardExtensions on Guard {
     String? message,
   }) {
     if (input < 0) {
-      throw ArgumentError.value(input, name, message ?? "Required input cannot be negative.");
+      throw ArgumentError.value(
+          input, name, message ?? "Required input cannot be negative.");
     }
 
     return input;
@@ -54,7 +57,8 @@ extension GuardExtensions on Guard {
     String? message,
   }) {
     if (input <= 0) {
-      throw ArgumentError.value(input, name, message ?? 'Required input cannot be zero or negative.');
+      throw ArgumentError.value(
+          input, name, message ?? 'Required input cannot be zero or negative.');
     }
 
     return input;
@@ -74,7 +78,8 @@ extension GuardExtensions on Guard {
     nullValue(input, name: name);
 
     if (input == '') {
-      throw ArgumentError.value(input, name, message ?? 'Input cannot be empty.');
+      throw ArgumentError.value(
+          input, name, message ?? 'Input cannot be empty.');
     }
 
     return input!;
@@ -88,7 +93,8 @@ extension GuardExtensions on Guard {
   }) {
     nullValue(input, name: name);
     if (input!.isEmpty) {
-      throw ArgumentError.value(input, name, message ?? 'Input cannot be an empty collection.');
+      throw ArgumentError.value(
+          input, name, message ?? 'Input cannot be an empty collection.');
     }
 
     return input;
@@ -98,7 +104,8 @@ extension GuardExtensions on Guard {
   String nullOrWhitespace(String? input, {String? name, String? message}) {
     nullOrEmpty(input, name: name, message: message);
     if (input!.trim() == '') {
-      throw ArgumentError.value(input, name, message ?? 'Input was null, empty, or whitespace.');
+      throw ArgumentError.value(
+          input, name, message ?? 'Input was null, empty, or whitespace.');
     }
 
     return input;
@@ -139,10 +146,12 @@ extension GuardExtensions on Guard {
     String? message,
   }) {
     if (rangeFrom.compareTo(rangeTo) > 0) {
-      throw ArgumentError(message ?? 'rangeFrom should be less than or equal to rangeTo', name);
+      throw ArgumentError(
+          message ?? 'rangeFrom should be less than or equal to rangeTo', name);
     }
 
-    if (input.any((x) => x.compareTo(rangeFrom) < 0 || x.compareTo(rangeTo) > 0)) {
+    if (input
+        .any((x) => x.compareTo(rangeFrom) < 0 || x.compareTo(rangeTo) > 0)) {
       throw ArgumentError(message ?? 'Input had out of range items.', name);
     }
 
